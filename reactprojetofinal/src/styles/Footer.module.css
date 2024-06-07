@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Cor de fundo cinza */
+    padding: 20px 0; /* Espaçamento */
+    color: #ffffff; /* Cor do texto branco */
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    a{
+        color: white;
+      }
+      .container{
+        width: 100%;
+      }
+  }
+
