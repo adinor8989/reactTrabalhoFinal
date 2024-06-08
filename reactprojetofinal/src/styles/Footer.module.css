@@ -1,16 +1,14 @@
 footer {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    background-color: black; /* Cor de fundo cinza */
+    background-color: rgb(255, 255, 255); /* Cor de fundo cinza */
     padding: 20px 0; /* Espaçamento */
-    color: #ffffff; /* Cor do texto branco */
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid black;
+    color: #000000; /* Cor do texto branco */
+
     a{
-        color: white;
+        color: rgb(0, 0, 0);
       }
       .container{
         width: 100%;

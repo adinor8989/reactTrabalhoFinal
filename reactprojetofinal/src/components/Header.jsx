@@ -76,7 +76,7 @@ export default function TemplateDemo() {
         }
     ];
 
-    const start = <img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" height="40" className="mr-2"></img>;
+    const start = <img alt="logo" src="https://media.discordapp.net/attachments/1211772456541495307/1248807868380086332/BLecommerce.jpg?ex=66650275&is=6663b0f5&hm=1da1a09df0a10a204072b19c72576423863bd03130320378c2de468f31db260c&=&format=webp" height="40" className="mr-2"></img>;
     const end = (
         <div className="flex align-items-center gap-2">
             <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
