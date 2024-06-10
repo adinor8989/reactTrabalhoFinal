@@ -41,7 +41,7 @@ export function Sobre() {
       img:
         "https://avatars.githubusercontent.com/u/162216533?v=4",
       number: "Telefone: (24) 9 9200-2192",
-      email: "E-mail: Jonas@brothers.com.br",
+      email: "E-mail: jonasbf.gomes@gmail.com.br",
       descricao: "O brabo tem nome! 😎",
       github: "https://github.com/Jbasts",
       instagram: "https://www.instagram.com/j.basts/",
