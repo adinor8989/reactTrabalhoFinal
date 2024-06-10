@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
 import { Badge } from 'primereact/badge';
 import { Avatar } from 'primereact/avatar';
 import styles from '../styles/Header.module.css'; 
+import CartProvider from '../context/CartContext';
+import { CartContext } from '../context/CartContext';
+
 
 export default function TemplateDemo() {
+    const { cart } = useContext(CartContext);
+
     const itemRenderer = (item) => (
         <a className="flex align-items-center p-menuitem-link">
             <span className={item.icon} />
@@ -17,62 +22,50 @@ export default function TemplateDemo() {
     const items = [
         {
             label: 'Home',
-            icon: 'pi pi-home'
+            icon: 'pi pi-home',
+            command: () => { window.location.href = '/' }
         },
         {
-            label: 'Features',
-            icon: 'pi pi-star'
+            label: 'Sobre',
+            icon: 'pi pi-envelope',
+            command: () => { window.location.href = '/Sobre' },
+            template: itemRenderer
         },
         {
-            label: 'Projects',
+            label: 'Login',
+            icon: 'pi pi-star',
+            command: () => { window.location.href = '/login' }
+        },
+        {
+            label: (
+                <span>
+                    Carrinho <Badge value={cart.length} severity="info" />
+                </span>
+            ),
             icon: 'pi pi-search',
-            items: [
+            items: cart.length === 0
+            ? [{ label: 'Carrinho Vazio.', 
+                template: itemRenderer,
+                command: () => { window.location.href = '/carrinho' } }]
+            : [
+                ...(cart.length > 1 
+                    ? [{ label: '${cart[0].nome}', 
+                        template: itemRenderer }] 
+                    : []),
+                ...(cart.length > 2 
+                    ? [{ label: '${cart[1].nome}', 
+                        template: itemRenderer }] 
+                    : []),
+                ...(cart.length > 3 
+                    ? [{ label: '${cart[2].nome}', 
+                        template: itemRenderer }] 
+                    : []),
                 {
-                    label: 'Core',
-                    icon: 'pi pi-bolt',
-                    shortcut: '⌘+S',
+                    label: 'Mais...',
+                    command: () => { window.location.href = '/carrinho' },
                     template: itemRenderer
-                },
-                {
-                    label: 'Blocks',
-                    icon: 'pi pi-server',
-                    shortcut: '⌘+B',
-                    template: itemRenderer
-                },
-                {
-                    label: 'UI Kit',
-                    icon: 'pi pi-pencil',
-                    shortcut: '⌘+U',
-                    template: itemRenderer
-                },
-                {
-                    separator: true
-                },
-                {
-                    label: 'Templates',
-                    icon: 'pi pi-palette',
-                    items: [
-                        {
-                            label: 'Apollo',
-                            icon: 'pi pi-palette',
-                            badge: 2,
-                            template: itemRenderer
-                        },
-                        {
-                            label: 'Ultima',
-                            icon: 'pi pi-palette',
-                            badge: 3,
-                            template: itemRenderer
-                        }
-                    ]
                 }
             ]
-        },
-        {
-            label: 'Contact',
-            icon: 'pi pi-envelope',
-            badge: 6,
-            template: itemRenderer
         }
     ];
 
