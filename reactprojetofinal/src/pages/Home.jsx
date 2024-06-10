@@ -5,7 +5,7 @@ import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
 import { Tag } from 'primereact/tag';
 import { ProductService } from '../service/ProductService';
-import { Card } from 'primereact/card';
+import { CardList } from '../components/Card1/Card';
 
 
 
@@ -90,33 +90,11 @@ export function Home() {
                 responsiveOptions={responsiveOptions}
                 itemTemplate={productTemplate} />
         </div>
-        <br />
-        <br />
-        <div className="card flex justify-content-center">
-                <Card title="Advanced Card" subTitle="Card subtitle" footer={footer} header={header} className="md:w-25rem">
-                    <p className="m-0">
-                    Produto
-                    </p>
-                </Card>
-            </div>
-            <br />
-        <br />
-        <div className="card flex justify-content-center">
-                <Card title="Advanced Card" subTitle="Card subtitle" footer={footer} header={header} className="md:w-25rem">
-                    <p className="m-0">
-                    Produto
-                    </p>
-                </Card>
-            </div>
-            <br />
-        <br />
-        <div className="card flex justify-content-center">
-                <Card title="Advanced Card" subTitle="Card subtitle" footer={footer} header={header} className="md:w-25rem">
-                    <p className="m-0">
-                    Produto
-                    </p>
-                </Card>
-            </div></>
+        <div>
+      <h1>Lista de Produtos</h1>
+      <CardList />
+    </div>
+      </>
             
     )
 }
