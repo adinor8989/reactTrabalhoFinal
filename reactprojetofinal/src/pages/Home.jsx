@@ -1,19 +1,27 @@
 import React from 'react';
-import styles from '../styles/Home.module.css';
 import { CardList } from '../components/Card1/Card';
+import styled from 'styled-components';
 
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 35px;
+  color: #333;
+  
+`;
 
 
 export function Home() {
     
     return (
         <>
-        <div>
-      <h1>Lista de Produtos</h1>
-      <CardList />
-    </div>
-      </>
-            
+        <Container>
+      <h1>Confira Nossos Produtos!</h1>
+    </Container>
+    <CardList />
+          </>
+          
     )
 }
 export default Home;
