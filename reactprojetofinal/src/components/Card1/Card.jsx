@@ -25,6 +25,7 @@ const Cardbox = styled.div`
   background-position: center;
   transition: transform 0.3s;
   border: 1px solid black;
+ 
 
   &:hover {
     transform: scale(1.05);
@@ -38,7 +39,7 @@ const Cardbox = styled.div`
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid red;
   }
 
   h2 {
@@ -59,11 +60,11 @@ const Cardbox = styled.div`
     border-radius: 5px;
     font-size: 1em;
     position: relative;
-    top: 320px;
+    top:320px;
     bottom: 20px;
     left: 35%;
-    border: 1px solid black;
-    margin-top: 30px;
+    border: 1px solid red;
+    margin-top:30px;
     transform: translateX(-50%);
     &:hover {
       background-color: #0056b3;
@@ -85,7 +86,7 @@ const Pagination = styled.div`
     cursor: pointer;
     border-radius: 5px;
     font-size: 1em;
-
+    
     &:disabled {
       background-color: #ccc;
       cursor: not-allowed;
@@ -110,6 +111,20 @@ const SectionTitle = styled.h1`
   text-align: center;
 `;
 
+const CategoryItem = styled.div`
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+`;
+
+const ColaboradorItem = styled.div`
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+`;
+
 // Componentes
 function Card({ product }) {
   return (
@@ -120,28 +135,6 @@ function Card({ product }) {
         <p><strong>Descrição:</strong> {product.descricao}</p>
       </div>
       <button>Adicionar ao Carrinho</button>
-    </Cardbox>
-  );
-}
-
-function CategoryCard({ category }) {
-  return (
-    <Cardbox style={{ backgroundImage: `url(${category.fotoCat})` }}>
-      <div className="info">
-        <h2>{category.nome}</h2>
-           </div>
-    </Cardbox>
-  );
-}
-
-
-function ColaboradorCard({ colaborador }) {
-  return (
-    <Cardbox style={{ backgroundImage: `url(${colaborador.fotoColab})` }}>
-      <div className="info">
-        <h2>{colaborador.nome}</h2>
-        <p><strong>Instituição:</strong> {colaborador.nomeInstituicao}</p>
-      </div>
     </Cardbox>
   );
 }
@@ -199,24 +192,23 @@ export function CardList() {
       </Pagination>
       <SectionContainer>
         <SectionTitle>Categorias</SectionTitle>
-        <Container>
-          {categories.map(category => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
-        </Container>
+        {categories.map(category => (
+          <CategoryItem key={category.id}>
+            <strong>Nome:</strong> {category.nome}, <strong>Descrição:</strong> {category.descricao}
+          </CategoryItem>
+        ))}
       </SectionContainer>
       <SectionContainer>
         <SectionTitle>Colaboradores</SectionTitle>
-        <Container>
-          {colaboradores.map(colaborador => (
-            <ColaboradorCard key={colaborador.id} colaborador={colaborador} />
-          ))}
-        </Container>
+        {colaboradores.map(colaborador => (
+          <ColaboradorItem key={colaborador.id}>
+            <strong>Nome:</strong> {colaborador.nome}, <strong>Instituição:</strong> {colaborador.nomeInstituicao}
+          </ColaboradorItem>
+        ))}
       </SectionContainer>
     </>
   );
 }
-
 
 
 
