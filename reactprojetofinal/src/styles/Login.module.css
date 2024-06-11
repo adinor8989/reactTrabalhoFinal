@@ -30,4 +30,9 @@
   .form button:hover {
     background-color: #0056b3;
   }
-  
+
+  .form h2 {
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+  }

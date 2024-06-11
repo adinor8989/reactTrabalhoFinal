@@ -69,7 +69,7 @@ export default function TemplateDemo() {
         }
     ];
 
-    const start = <img alt="logo" src="https://media.discordapp.net/attachments/1211772456541495307/1248807868380086332/BLecommerce.jpg?ex=66650275&is=6663b0f5&hm=1da1a09df0a10a204072b19c72576423863bd03130320378c2de468f31db260c&=&format=webp" height="40" className="mr-2"></img>;
+    const start = <img alt="logo" src="https://media.discordapp.net/attachments/1211772456541495307/1248807868380086332/BLecommerce.jpg?ex=66684e35&is=6666fcb5&hm=19497baa0c2f71307405f72f5da19e482884281d1738aa0b22d04275dda437f5&=&format=webp&width=125&height=50" height="40" className="mr-2"></img>;
     const end = (
         <div className="flex align-items-center gap-2">
             <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
