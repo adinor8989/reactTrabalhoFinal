@@ -126,18 +126,18 @@ function Card({ product }) {
 
 function CategoryCard({ category }) {
   return (
-    <Cardbox style={{ backgroundImage: `url(${category.fotoUrl})` }}>
+    <Cardbox style={{ backgroundImage: `url(${category.fotoCat})` }}>
       <div className="info">
         <h2>{category.nome}</h2>
-        <p><strong>Descrição:</strong> {category.descricao}</p>
-      </div>
+           </div>
     </Cardbox>
   );
 }
 
+
 function ColaboradorCard({ colaborador }) {
   return (
-    <Cardbox style={{ backgroundImage: `url(${colaborador.fotoUrl})` }}>
+    <Cardbox style={{ backgroundImage: `url(${colaborador.fotoColab})` }}>
       <div className="info">
         <h2>{colaborador.nome}</h2>
         <p><strong>Instituição:</strong> {colaborador.nomeInstituicao}</p>

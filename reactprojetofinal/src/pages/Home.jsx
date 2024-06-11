@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: 35px;
-  color: black ;
+  color: #333;
   
 `;
 
@@ -17,13 +17,11 @@ export function Home() {
     return (
         <>
         <Container>
-      <h1>Lista de Produtos Dísponiveis</h1>
-      
+      <h1>Confira Nossos Produtos!</h1>
     </Container>
     <CardList />
-    
-      </>
-            
+          </>
+          
     )
 }
 export default Home;
