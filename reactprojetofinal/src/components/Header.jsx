@@ -49,15 +49,15 @@ export default function TemplateDemo() {
                 command: () => { window.location.href = '/carrinho' } }]
             : [
                 ...(cart.length > 1 
-                    ? [{ label: '${cart[0].nome}', 
+                    ? [{ label: cart[0].name, 
                         template: itemRenderer }] 
                     : []),
                 ...(cart.length > 2 
-                    ? [{ label: '${cart[1].nome}', 
+                    ? [{ label: cart[1].name, 
                         template: itemRenderer }] 
                     : []),
                 ...(cart.length > 3 
-                    ? [{ label: '${cart[2].nome}', 
+                    ? [{ label: cart[2].name, 
                         template: itemRenderer }] 
                     : []),
                 {

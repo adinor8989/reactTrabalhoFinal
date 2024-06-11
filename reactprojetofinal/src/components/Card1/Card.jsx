@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext,useEffect, useState } from 'react';
+import { CartContext } from '../../context/CartContext';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -127,6 +128,8 @@ const ColaboradorItem = styled.div`
 
 // Componentes
 function Card({ product }) {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <Cardbox style={{ backgroundImage: `url(${product.fotoUrl})` }}>
       <div className="info">
@@ -134,7 +137,7 @@ function Card({ product }) {
         <p><strong>Valor:</strong> R$ {product.valor.toFixed(2)}</p>
         <p><strong>Descrição:</strong> {product.descricao}</p>
       </div>
-      <button>Adicionar ao Carrinho</button>
+      <button onClick={()=>addToCart(product)}>Adicionar ao Carrinho</button>
     </Cardbox>
   );
 }
