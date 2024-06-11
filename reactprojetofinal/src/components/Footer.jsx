@@ -8,7 +8,7 @@ export default function Component() {
         <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
           <Footer.Brand
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            src="./assets/BLOCK.png"
+            src="./src/assets/BLOCK.png"
             alt="Block Commerce"
 
           />
