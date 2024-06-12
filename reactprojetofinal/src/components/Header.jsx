@@ -32,11 +32,6 @@ export default function TemplateDemo() {
             template: itemRenderer
         },
         {
-            label: 'Login',
-            icon: 'pi pi-star',
-            command: () => { window.location.href = '/login' }
-        },
-        {
             label: (
                 <span>
                     Carrinho <Badge value={cart.length} severity="info" />
@@ -66,7 +61,12 @@ export default function TemplateDemo() {
                     template: itemRenderer
                 }
             ]
-        }
+        },
+        {
+            label: 'Login',
+            icon: 'pi pi-star',
+            command: () => { window.location.href = '/login' }
+        },
     ];
 
     const start = <img alt="logo" src="./src/assets/BL.png" height="60" id='logo' ></img>;

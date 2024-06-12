@@ -23,7 +23,6 @@ export const Registro = () => {
 
     try {
       postCliente(form);
-      navigate('/'); 
     } catch (error) {
       console.error("Erro ao registrar o cliente:", error);
 

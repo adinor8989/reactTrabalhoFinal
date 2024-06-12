@@ -12,7 +12,7 @@ import { api } from "./api"
             console.log("Cliente Criado com sucesso", res)
             salvarPerfilUsuario(res.data)
             salvarToken("Logado")
-            setTimeout(() => (window.location.href = "/perfil"), 2000)
+            setTimeout(() => (window.location.href = "/"), 2000)
             return alert('Bem vindo, '+ cliente.nome)
         } catch (err) {
             console.error("Erro ao criar cliente", err)

@@ -55,7 +55,7 @@ export const Login = () => {
           onChange={(e) => setSenha(e.target.value)}
           required
         />
-        <button type="submit">Entrar</button>
+        <button type="submit" onClick={handleSubmit}>Entrar</button>
         <h2>
           <a href="http://localhost:5173/registro">Cadastro</a>
         </h2>
