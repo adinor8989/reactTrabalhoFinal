@@ -10,7 +10,7 @@ export const Registro = () => {
     cpf: '',
     telefone: '',
     cep: '',
-    // senha: '',
+    senha: '',
   });
 
 
@@ -39,7 +39,7 @@ export const Registro = () => {
         <input type="text" name="cpf" placeholder="CPF" value={form.cpf} onChange={handleChange} required maxLength="14" />
         <input type="text" name="telefone" placeholder="Telefone" value={form.telefone} onChange={handleChange} required />
         <input type="text" name="cep" placeholder="Endereço" value={form.cep} onChange={handleChange} required />
-        {/* <input type="password" name="senha" placeholder="Senha" value={form.senha} onChange={handleChange} required /> */}
+        <input type="password" name="senha" placeholder="Senha" value={form.senha} onChange={handleChange} required />
         <button type="submit">Registrar</button>
       </form>
     </div>
